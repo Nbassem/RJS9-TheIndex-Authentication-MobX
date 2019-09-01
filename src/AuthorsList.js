@@ -18,8 +18,9 @@ const AuthorsList = () => {
     <div className="authors">
       <h3>Authors</h3>
       <SearchBar store={authorStore} />
+
       <div className="row">
-        <AddAuthorCard />
+        {authorStore.user ? <AddAuthorCard /> : ""}
         {authorCards}
       </div>
     </div>
